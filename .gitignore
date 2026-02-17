@@ -18,3 +18,18 @@ yarn-error.log
 /.idea
 /.vscode
 RRC phpmyadmin.txt
+
+# Fichiers sensibles / Sensitive files
+/public/uploads
+/storage/logs
+/storage/app/private
+*.log
+*.sql
+*.sqlite
+*.pem
+*.key
+*.p12
+*.pfx
+/bootstrap/cache/*.php
+.DS_Store
+Thumbs.db
