@@ -419,6 +419,20 @@
         </header>
     @endguest
 
+    {{-- --------------------------------------------------------------- Bannière mode démo  --------------------------------------------------------------- --}}
+    @if(env('DEMO_MODE', false))
+        <div style="background:linear-gradient(90deg,#2563eb,#1e40af);color:#fff;padding:10px 16px;text-align:center;font-size:14px;font-weight:500;">
+            🚗 Mode démo — toutes les actions destructives sont désactivées.
+            Admin : <code style="background:rgba(255,255,255,0.2);padding:2px 6px;border-radius:4px;">medou@email.com</code> / <code style="background:rgba(255,255,255,0.2);padding:2px 6px;border-radius:4px;">pass1234</code> ·
+            <a href="https://github.com/medghilly/krilywete" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Code source GitHub</a>
+        </div>
+        @if(session('demo_notice'))
+            <div style="background:#fef3c7;color:#92400e;padding:10px 16px;text-align:center;font-size:14px;border-bottom:1px solid #fcd34d;">
+                ⚠️ {{ session('demo_notice') }}
+            </div>
+        @endif
+    @endif
+
     {{-- --------------------------------------------------------------- Contenu Principal  --------------------------------------------------------------- --}}
     <main class="flex-grow conteneur">
         @yield('content')

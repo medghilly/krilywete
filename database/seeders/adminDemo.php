@@ -14,26 +14,32 @@ class adminDemo extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => 'Mouhamedou',
-            'email' => 'medou@email.com',
-            'password' => Hash::make('pass1234'),
-            'role' => 'admin',
-            'avatar' => '/images/avatars/avatar_2.jpg'
-        ]);
-        User::create([
-            'name' => 'Med ghilly',
-            'email' => 'mghilly@email.com',
-            'password' => Hash::make('pass1234'),
-            'role' => 'client',
-            'avatar' => '/images/avatars/avatar_6.jpg'
-        ]);
-         User::create([
-            'name' => 'cheikhani',
-            'email' => 'cheikhani@email.com',
-            'password' => Hash::make('pass1234'),
-            'role' => 'client',
-            'avatar' => '/images/avatars/avatar_6.jpg'
-        ]);
+        User::updateOrCreate(
+            ['email' => 'medou@email.com'],
+            [
+                'name' => 'Mouhamedou',
+                'password' => Hash::make('pass1234'),
+                'role' => 'admin',
+                'avatar' => '/images/avatars/avatar_2.jpg',
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'mghilly@email.com'],
+            [
+                'name' => 'Med ghilly',
+                'password' => Hash::make('pass1234'),
+                'role' => 'client',
+                'avatar' => '/images/avatars/avatar_6.jpg',
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'cheikhani@email.com'],
+            [
+                'name' => 'cheikhani',
+                'password' => Hash::make('pass1234'),
+                'role' => 'client',
+                'avatar' => '/images/avatars/avatar_6.jpg',
+            ]
+        );
     }
 }

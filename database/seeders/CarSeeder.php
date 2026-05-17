@@ -456,6 +456,10 @@ class CarSeeder extends Seeder
             ],
         ];
 
+        if (DB::table('cars')->count() > 0) {
+            return;
+        }
+
         foreach ($cars as $car) {
             DB::table('cars')->insert([
                 'brand' => $car['brand'],

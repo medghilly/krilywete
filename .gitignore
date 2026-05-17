@@ -33,3 +33,8 @@ RRC phpmyadmin.txt
 /bootstrap/cache/*.php
 .DS_Store
 Thumbs.db
+
+# Installers / binaries that shouldn't be in repo
+*.msi
+*.exe
+*.dmg
