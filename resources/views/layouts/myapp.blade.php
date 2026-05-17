@@ -498,7 +498,7 @@
                                 </div>
                                 <div class="flex items-center">
                                     <i class="fas fa-envelope text-gray-400 mr-3"></i>
-                                    <a href="mailto:hadramidehah1@gmail.com" class="text-gray-400 hover:text-white">hadramidehah1@gmail.com</a>
+                                    <a href="mailto:mohamed.ghelli.elbou@gmail.com" class="text-gray-400 hover:text-white">mohamed.ghelli.elbou@gmail.com</a>
                                 </div>
                                 <div class="flex items-center">
                                     <i class="fab fa-github text-gray-400 mr-3"></i>

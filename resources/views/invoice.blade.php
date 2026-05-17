@@ -268,11 +268,11 @@
         <div class="info-section">
             <div class="info-box">
                 <h2>Société</h2>
-                <div class="info-item"><strong>Nom:</strong> Krilywete SARL</div>
-                <div class="info-item"><strong>Adresse:</strong> DR ANABDOUR AMMELEN, TIZNIT</div>
-                <div class="info-item"><strong>Téléphone:</strong> +212 637 998 660</div>
-                <div class="info-item"><strong>Email:</strong> contact@krilywete.com</div>
-                <div class="info-item"><strong>Site web:</strong> www.krilywete.com</div>
+                <div class="info-item"><strong>Nom:</strong> Krilywete</div>
+                <div class="info-item"><strong>Adresse:</strong> Avenue Gamal Abdel Nasser, Nouakchott, Mauritanie</div>
+                <div class="info-item"><strong>Téléphone:</strong> +222 46 07 18 82</div>
+                <div class="info-item"><strong>Email:</strong> mohamed.ghelli.elbou@gmail.com</div>
+                <div class="info-item"><strong>Site web:</strong> krilywete.onrender.com</div>
             </div>
 
             <div class="info-box">
@@ -340,9 +340,9 @@
         </div>
 
         <div class="footer">
-            <p><strong>Krilywete SARL</strong> - Capital social: 100 000 DH - RC: 12345 - IF: 987654</p>
-            <p>Adresse: DR ANABDOUR AMMELEN, TIZNIT - Tél: +212 637 998 660</p>
-            <p>Email: contact@krilywete.com - Site web: www.krilywete.com</p>
+            <p><strong>Krilywete</strong> — Location de voitures à Nouakchott</p>
+            <p>Adresse: Avenue Gamal Abdel Nasser, Nouakchott - Tél: +222 46 07 18 82</p>
+            <p>Email: mohamed.ghelli.elbou@gmail.com - Site web: krilywete.onrender.com</p>
         </div>
     </div>
 

@@ -34,8 +34,8 @@
                 </div>
                 <div class="mt-6 text-center space-y-2">
                     <p class="text-lg text-gray-600"><strong>Adresse :</strong> Avenue Gamal Abdel Nasser, Nouakchott, Mauritanie</p>
-                    <p class="text-lg text-gray-600"><strong>Téléphone :</strong> <a href="tel:+22212345678" class="text-blue-600 hover:underline">+222 12 34 56 78</a></p>
-                    <p class="text-lg text-gray-600"><strong>Email :</strong> <a href="mailto:contact@location-voiture.mr" class="text-blue-600 hover:underline">contact@location-voiture.mr</a></p>
+                    <p class="text-lg text-gray-600"><strong>Téléphone :</strong> <a href="tel:+22246071882" class="text-blue-600 hover:underline">+222 46 07 18 82</a></p>
+                    <p class="text-lg text-gray-600"><strong>Email :</strong> <a href="mailto:mohamed.ghelli.elbou@gmail.com" class="text-blue-600 hover:underline">mohamed.ghelli.elbou@gmail.com</a></p>
                 </div>
             </div>
         </div>

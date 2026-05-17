@@ -41,7 +41,7 @@
                             <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
                             <input type="tel" id="phone"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pr-400 focus:border-pr-400 transition duration-200"
-                                placeholder="+212 600 000 000">
+                                placeholder="+222 46 07 18 82">
                         </div>
                     </div>
                     
@@ -84,8 +84,8 @@
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-800 mb-2">Informations sur l'entreprise</h3>
-                            <p class="text-gray-600 mb-1">RealRentCar SARL</p>
-                            <p class="text-gray-600">Localisation : Maroc</p>
+                            <p class="text-gray-600 mb-1">Krilywete</p>
+                            <p class="text-gray-600">Localisation : Nouakchott, Mauritanie</p>
                         </div>
                     </div>
                 </div>
@@ -101,8 +101,8 @@
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-800 mb-2">Adresse</h3>
-                            <p class="text-gray-600 mb-1">DR ANABDOUR AMMELEN TIZNIT</p>
-                            <p class="text-gray-600">Code postal : 85450</p>
+                            <p class="text-gray-600 mb-1">Avenue Gamal Abdel Nasser</p>
+                            <p class="text-gray-600">Nouakchott, Mauritanie</p>
                         </div>
                     </div>
                 </div>
@@ -118,8 +118,8 @@
                         <div>
                             <h3 class="text-xl font-bold text-gray-800 mb-2">Appelez-nous</h3>
                             <p class="text-gray-600 mb-3">Notre équipe est disponible pour répondre à vos questions.</p>
-                            <a href="tel:+212600000000" class="text-pr-500 font-medium hover:text-pr-600 transition duration-200">
-                                +212 600 000 000
+                            <a href="tel:+22246071882" class="text-pr-500 font-medium hover:text-pr-600 transition duration-200">
+                                +222 46 07 18 82
                             </a>
                         </div>
                     </div>
