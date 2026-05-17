@@ -27,6 +27,7 @@ RUN mkdir -p database storage/framework/{cache,sessions,views} storage/logs boot
     && cp -r storage/app/images/* public/images/ 2>/dev/null || true \
     && chmod -R 775 storage bootstrap/cache database public/uploads
 
+ENV PORT=8080
 EXPOSE 8080
 
-CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force || true && php artisan config:cache && php artisan route:cache && php artisan view:cache && php -S 0.0.0.0:8080 -t public"]
+CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force || true && php artisan config:cache && php artisan route:cache && php artisan view:cache && php -S 0.0.0.0:${PORT} -t public"]
