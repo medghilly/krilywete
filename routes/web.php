@@ -110,11 +110,16 @@ route::get('invoice/{reservation}', [invoiceController::class, 'invoice'])->name
 
 //---------------------------------------------------------------------------//
 
-// Mode démo : on garde les routes d'auth pour ne pas casser l'app,
-// mais on redirige login/register vers la home avec un message.
+// Mode démo : on garde les noms de routes définis pour ne pas casser le layout
+// (route('login'), route('register'), route('logout') sont appelés dans les vues).
+// En démo, on les redirige vers la home — pas de vraie déconnexion car l'auto-login
+// reconnecte le visiteur immédiatement après.
 if (env('DEMO_MODE', false)) {
     Route::redirect('/login', '/')->name('login');
     Route::redirect('/register', '/')->name('register');
+    Route::match(['get', 'post'], '/logout', function () {
+        return redirect('/');
+    })->name('logout');
 } else {
     Auth::routes();
 }
