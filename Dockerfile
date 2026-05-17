@@ -30,4 +30,4 @@ RUN mkdir -p database storage/framework/{cache,sessions,views} storage/logs boot
 ENV PORT=8080
 EXPOSE 8080
 
-CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force || true && php artisan config:cache && php artisan route:cache && php artisan view:cache && php -S 0.0.0.0:${PORT} -t public"]
+CMD ["sh", "-c", "if ! echo \"$APP_KEY\" | grep -q '^base64:'; then export APP_KEY=$(php -r 'echo \"base64:\".base64_encode(random_bytes(32));'); fi && php artisan migrate --force && php artisan db:seed --force || true && php artisan config:cache && php artisan route:cache && php artisan view:cache && php -S 0.0.0.0:${PORT} -t public"]
