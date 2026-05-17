@@ -15,6 +15,8 @@ services:
         value: "false"
       - key: APP_KEY
         value: "base64:TJ4usDuB+8A29G5iRNxvUWXrKhpEZfB21RCIMeOUOkc="
+      - key: APP_URL
+        value: "https://krilywete.onrender.com"
       - key: LOG_CHANNEL
         value: stderr
       - key: LOG_LEVEL

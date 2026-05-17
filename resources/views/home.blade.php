@@ -9,7 +9,7 @@
                         <span class="text-pr-400">LOCATION</span> DE VOITURE <br>RAPIDE ET FACILE
                     </h1>
                     <div class="md:hidden w-full">
-                        <img loading="lazy" src="/images/home-car.png" alt="Voiture de location" class="mx-auto">
+                        <img loading="lazy" src="/images/home car.png" alt="Voiture de location" class="mx-auto">
                     </div>
                     <p class="text-lg text-gray-700">
                         Que vous planifiez un week-end ou un long voyage, nous avons la solution parfaite pour vous. Avec notre large sélection de véhicules et notre système de réservation simplifié, louer une voiture n'a jamais été aussi simple.
