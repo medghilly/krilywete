@@ -235,22 +235,11 @@
                     {{-- LOGO --}}
                     <a href="{{ route('home') }}" class="flex items-center focus:outline-none">
                         <img loading="lazy" src="/images/logos/LOGO.png" class="mr-3 h-12" alt="Logo Krilywete" />
-                        <span style="font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 300; letter-spacing: 3px; color: #333;">krilywete</span>
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; color: #1e293b;">Krilywete</span>
                     </a>
 
-                    {{-- Boutons Connexion & Inscription --}}
+                    {{-- Mode démo : boutons login/register cachés, garder uniquement le toggle mobile --}}
                     <div class="flex items-center lg:order-2 space-x-3">
-                        <a href="{{ route('login') }}">
-                            <button type="button" class="btn-primaire">
-                                <i class="fas fa-sign-in-alt mr-2"></i> Connexion
-                            </button>
-                        </a>
-                        <a href="{{ route('register') }}">
-                            <button class="btn-accent">
-                                <i class="fas fa-user-plus mr-2"></i> Inscription
-                            </button>
-                        </a>
-
                         {{-- Menu mobile --}}
                         <button data-collapse-toggle="menu-mobile" type="button"
                             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -422,15 +411,9 @@
     {{-- --------------------------------------------------------------- Bannière mode démo  --------------------------------------------------------------- --}}
     @if(env('DEMO_MODE', false))
         <div style="background:linear-gradient(90deg,#2563eb,#1e40af);color:#fff;padding:10px 16px;text-align:center;font-size:14px;font-weight:500;">
-            🚗 Mode démo — toutes les actions destructives sont désactivées.
-            Admin : <code style="background:rgba(255,255,255,0.2);padding:2px 6px;border-radius:4px;">medou@email.com</code> / <code style="background:rgba(255,255,255,0.2);padding:2px 6px;border-radius:4px;">pass1234</code> ·
-            <a href="https://github.com/medghilly/krilywete" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Code source GitHub</a>
+            🚗 Mode démo — site vitrine pour portfolio.
+            <a href="https://github.com/medghilly/krilywete" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;margin-left:8px;">Code source GitHub</a>
         </div>
-        @if(session('demo_notice'))
-            <div style="background:#fef3c7;color:#92400e;padding:10px 16px;text-align:center;font-size:14px;border-bottom:1px solid #fcd34d;">
-                ⚠️ {{ session('demo_notice') }}
-            </div>
-        @endif
     @endif
 
     {{-- --------------------------------------------------------------- Contenu Principal  --------------------------------------------------------------- --}}
@@ -511,11 +494,15 @@
                             <div class="space-y-2">
                                 <div class="flex items-center">
                                     <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
-                                    <span class="text-gray-400">+1 (555) 123-4567</span>
+                                    <a href="tel:+22246071882" class="text-gray-400 hover:text-white">+222 46 07 18 82</a>
                                 </div>
                                 <div class="flex items-center">
                                     <i class="fas fa-envelope text-gray-400 mr-3"></i>
-                                    <span class="text-gray-400">contact@krilywete.com</span>
+                                    <a href="mailto:hadramidehah1@gmail.com" class="text-gray-400 hover:text-white">hadramidehah1@gmail.com</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fab fa-github text-gray-400 mr-3"></i>
+                                    <a href="https://github.com/medghilly" target="_blank" rel="noopener" class="text-gray-400 hover:text-white">github.com/medghilly</a>
                                 </div>
                             </div>
                         </div>
@@ -526,7 +513,7 @@
 
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <span class="text-sm text-gray-400 sm:text-center">
-                        © 2025 <a href="#" class="hover:underline">Krilywete</a>. Tous droits réservés.
+                        © 2025 <a href="#" class="hover:underline">Krilywete</a> · Développé par <a href="https://github.com/medghilly" target="_blank" rel="noopener" class="hover:text-white font-medium">Med Ghilly</a>
                     </span>
                     <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                         <a href="#" class="text-gray-400 hover:text-white focus:outline-none" aria-label="Paiement Visa">

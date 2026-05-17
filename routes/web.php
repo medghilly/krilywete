@@ -18,7 +18,7 @@ use App\Models\Reservation;
 
 // ------------------- guest routes --------------------------------------- //
 Route::get('/', function () {
-    $cars = Car::take(6)->where('status', '=', 'available')->get();
+    $cars = Car::take(6)->where('status', '=', 'Available')->get();
     return view('home', compact('cars'));
 })->name('home');
 
@@ -110,4 +110,11 @@ route::get('invoice/{reservation}', [invoiceController::class, 'invoice'])->name
 
 //---------------------------------------------------------------------------//
 
-Auth::routes();
+// Mode démo : on garde les routes d'auth pour ne pas casser l'app,
+// mais on redirige login/register vers la home avec un message.
+if (env('DEMO_MODE', false)) {
+    Route::redirect('/login', '/')->name('login');
+    Route::redirect('/register', '/')->name('register');
+} else {
+    Auth::routes();
+}
