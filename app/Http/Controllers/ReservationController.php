@@ -25,25 +25,32 @@ class ReservationController extends Controller
 
    public function store(Request $request, $car_id)
 {
-    $request->validate([
+    $isDemo = env('DEMO_MODE', false);
+
+    $rules = [
         'full-name' => 'required|string|max:255',
         'email' => 'required|email',
         'reservation_dates' => 'required|string',
         'payment_method' => 'required|string',
         'transaction_number' => 'required|string|max:255',
-        'payment_screenshot' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-    ]);
+        'payment_screenshot' => $isDemo
+            ? 'nullable|image|mimes:jpeg,png,jpg|max:2048'
+            : 'required|image|mimes:jpeg,png,jpg|max:2048',
+    ];
+    $request->validate($rules);
 
     $car = Car::findOrFail($car_id);
     $user = Auth::user();
 
-    // ⚠️ Vérifier la limite de 2 réservations actives
-    $userReservationsCount = Reservation::where('user_id', $user->id)
-        ->whereIn('status', ['Active', 'Pending', 'Confirmed'])
-        ->count();
+    // ⚠️ Vérifier la limite de 2 réservations actives (sauf en démo)
+    if (!$isDemo) {
+        $userReservationsCount = Reservation::where('user_id', $user->id)
+            ->whereIn('status', ['Active', 'Pending', 'Confirmed'])
+            ->count();
 
-    if ($userReservationsCount >= 2) {
-        return redirect()->back()->with('limit_exceeded', 'Vous avez déjà 2 réservations actives. Veuillez attendre qu\'elles soient terminées ou annulées.');
+        if ($userReservationsCount >= 2) {
+            return redirect()->back()->with('limit_exceeded', 'Vous avez déjà 2 réservations actives. Veuillez attendre qu\'elles soient terminées ou annulées.');
+        }
     }
 
     // 📆 Extraire et vérifier les dates
@@ -101,9 +108,11 @@ class ReservationController extends Controller
     $reservation->payment_status = 'Pending';
     $reservation->save();
 
-    // 🚗 Marquer voiture comme réservée
-    $car->status = 'Reserved';
-    $car->save();
+    // 🚗 Marquer voiture comme réservée (sauf en démo pour que d'autres puissent tester)
+    if (!$isDemo) {
+        $car->status = 'Reserved';
+        $car->save();
+    }
 
     return view('thankyou', ['reservation' => $reservation]);
 }

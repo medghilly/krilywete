@@ -10,6 +10,14 @@
 </head>
 
 <body class="bg-gray-100">
+    @if(env('DEMO_MODE', false))
+        <div style="background:linear-gradient(90deg,#f59e0b,#dc2626);color:#fff;padding:16px 20px;text-align:center;font-size:16px;font-weight:600;line-height:1.6;">
+            🎉 Bien joué, tu as testé tout le flow de réservation jusqu'au bout ! 😄<br>
+            <span style="font-size:14px;font-weight:400;opacity:0.95;">Petit rappel quand même : c'est juste une <strong>démo portfolio</strong> 🙃 personne ne va vraiment venir te livrer la voiture, désolé pour le road trip... 🚗💨</span><br>
+            <span style="font-size:13px;font-weight:400;opacity:0.9;">Mais hey, si tu veux un dev qui code des apps comme ça, tu sais qui contacter 😉 — <a href="mailto:mohamed.ghelli.elbou@gmail.com" style="color:#fff;text-decoration:underline;font-weight:600;">Med Ghilly</a></span>
+        </div>
+    @endif
+
     <div class="min-h-screen flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden">
             <!-- Header -->
@@ -66,7 +74,7 @@
 
                 <!-- Support -->
                 <div class="text-center text-gray-600 mt-6">
-                    <p>Besoin d'aide ? Appelez-nous au <span class="font-semibold">+222 12 34 56 78</span> ou envoyez un mail à <span class="text-blue-600 font-semibold">support@krilywete.mr</span></p>
+                    <p>Besoin d'aide ? Appelez-nous au <span class="font-semibold">+222 46 07 18 82</span> ou envoyez un mail à <span class="text-blue-600 font-semibold">mohamed.ghelli.elbou@gmail.com</span></p>
                 </div>
             </div>
 

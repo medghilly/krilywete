@@ -22,6 +22,7 @@ class DemoMode
             'admin.login.submit',
             'password.email',
             'password.update',
+            'car.reservationStore',
         ];
 
         if (in_array($request->method(), $blockedMethods)
